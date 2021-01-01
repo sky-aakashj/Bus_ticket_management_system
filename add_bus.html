@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>ADD BUS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<link rel="stylesheet" type="text/css" href="css/registration.css">
+<?php 
+
+require ("dbcon.php");
+
+session_start();
+auth();
+
+?>
+</head>
+
+<body  style="background-color:grey;">
+<div class="signup-form">
+    <form action="add_bus_action.php" method="post">
+		<h2>Add Bus</h2>
+		
+		<hr>
+        
+        <div class="form-group">
+        	<input type="text" class="form-control" name="busname" placeholder="Bus Name" required="required">
+        </div>
+		
+		<div class="form-group">
+        	<input type="text" class="form-control" name="origin" placeholder="Staring Bus Stop" required="required">
+        </div>
+		<div class="form-group">
+            <input type="text" class="form-control" name="destination" placeholder="Destination" required="required">
+        </div>
+		<div class="form-group">
+            <input type="number" class="form-control" name="seats" placeholder="Number of Seats" required="required">
+        </div> 
+			<div class="form-group">
+            <input type="number" class="form-control" name="fare" placeholder="Fare per Seat" required="required">
+        </div>
+			<div class="form-group">
+            <input type="time" class="form-control" name="arrivaltime" placeholder="Arrival Time" required="required">
+        </div> 
+        
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg" >SUBMIT</button>
+        </div>
+    </form>
+	
+</div>
+
+</body>
+
+</html>
